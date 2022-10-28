@@ -11,13 +11,33 @@ fun main() {
     contaTwo.numero = 1001
     contaTwo.saldo = 300.0
 
-    println(contaOne.titular)
-    println(contaOne.numero)
-    println(contaOne.saldo)
+//    println(contaOne.titular)
+//    println(contaOne.numero)
+//    println(contaOne.saldo)
+//
+//    println(contaTwo.titular)
+//    println(contaTwo.numero)
+//    println(contaTwo.saldo)
 
-    println(contaTwo.titular)
-    println(contaTwo.numero)
-    println(contaTwo.saldo)
+    val numeroX = 10
+    var numeroY = numeroX
+    numeroY++
+
+    println("numeroX $numeroX")
+    println("numeroY $numeroY")
+
+    val contaJoao = Conta()
+    contaJoao.titular = "João"
+    var contaMaria = contaJoao
+
+    contaMaria.titular = "Maria"
+    contaJoao.titular = "João"
+
+    println("titular conta joao: ${contaJoao.titular}")
+    println("titular conta maria: ${contaMaria.titular}")
+
+    println(contaJoao)
+    println(contaMaria)
 
 //    testaLacos()
 //    testaCondicoes(saldo)
