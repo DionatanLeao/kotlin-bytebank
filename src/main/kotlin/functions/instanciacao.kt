@@ -54,4 +54,17 @@ fun instanciacao() {
     println("saque em excesso Two")
     contaOne.saca(500.0)
     println(contaTwo.saldo)
+
+    println()
+
+    println("transferencia da conta Two para a conta One")
+    if(contaTwo.transfere(100.0, contaOne)) {
+        println("transferência sucedida")
+    } else {
+        println("falha na transferência")
+    }
+
+    println()
+    println(contaOne.saldo)
+    println(contaTwo.saldo)
 }

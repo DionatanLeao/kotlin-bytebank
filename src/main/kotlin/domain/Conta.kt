@@ -14,4 +14,13 @@ class Conta {
             saldo -= valor
         }
     }
+
+    fun transfere(valor: Double, destino: Conta): Boolean {
+        if (saldo >= valor) {
+            saldo -= valor
+            destino.saldo += valor
+            return true
+        }
+        return false
+    }
 }
