@@ -1,6 +1,6 @@
 import domain.Conta
 
-fun instanciacao() {
+fun comportamentosConta() {
     val contaUm = Conta("Dionatan", 1000)
     contaUm.deposita(200.0)
 
