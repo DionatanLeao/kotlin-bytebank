@@ -3,20 +3,13 @@ package domain
 class Conta {
     var titular = ""
     var numero = 0
-    private var saldo = 0.0
-
-    fun getSaldo(): Double {
-        return this.saldo
-    }
-
-    fun setSaldo(valor: Double) {
-        if (saldo > 0) {
-            saldo = saldo
-        }
-    }
+    var saldo = 0.0
+        private set
 
     fun deposita(valor: Double) {
-        saldo += valor
+        if (valor > 0) {
+            this.saldo += valor
+        }
     }
 
     fun saca(valor: Double) {
