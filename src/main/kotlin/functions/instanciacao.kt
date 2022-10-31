@@ -7,6 +7,9 @@ fun instanciacao() {
     val contaDois = Conta("Leão", 1001)
     contaDois.deposita(300.0)
 
+    val contaTres = Conta(titular = "Leão", numero = 1001)
+    contaDois.deposita(300.0)
+
     println(contaUm.titular)
     println(contaUm.numero)
     println(contaUm.saldo)
@@ -54,7 +57,7 @@ fun instanciacao() {
     println()
 
     println("transferencia da conta Dois para a conta Um")
-    if (contaDois.transfere(100.0, contaUm)) {
+    if (contaDois.transfere(valor = 300.0, destino = contaUm)) {
         println("transferência sucedida")
     } else {
         println("falha na transferência")

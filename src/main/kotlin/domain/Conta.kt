@@ -2,7 +2,7 @@ package domain
 
 class Conta(
     var titular: String,
-    var numero: Int
+    val numero: Int
 ) {
     var saldo = 0.0
         private set
