@@ -1,3 +1,4 @@
+import domain.Diretor
 import domain.Funcionario
 import domain.Gerente
 
@@ -20,7 +21,7 @@ fun main() {
 
     val funcionarioDois = Gerente(
         "funcionario dois",
-        "222.222.22-22",
+        "222.222.222-22",
         2000.0,
         1234
     )
@@ -31,6 +32,28 @@ fun main() {
     println("bonificação: ${funcionarioDois.bonificacao()}")
 
     if (funcionarioDois.autentica(1234)) {
+        println("autenticou com sucesso")
+    } else {
+        println("falha na autenticação")
+    }
+
+    println()
+
+    val funcionarioTres = Diretor(
+        "funcionario tres",
+        "333.333.333-33",
+        4000.0,
+        4000,
+        200.0
+    )
+
+    println("nome: ${funcionarioTres.nome}")
+    println("cpf: ${funcionarioTres.cpf}")
+    println("salario: ${funcionarioTres.salario}")
+    println("plr: ${funcionarioTres.plr}")
+    println("bonificação: ${funcionarioTres.bonificacao()}")
+
+    if (funcionarioTres.autentica(4000)) {
         println("autenticou com sucesso")
     } else {
         println("falha na autenticação")

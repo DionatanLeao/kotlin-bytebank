@@ -1,6 +1,6 @@
 package domain
 
-class Funcionario(
+open class Funcionario(
     val nome: String,
     val cpf: String,
     val salario: Double
