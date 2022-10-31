@@ -8,8 +8,7 @@ fun copiasEReferencias() {
     println("numeroX $numeroX")
     println("numeroY $numeroY")
 
-    val contaJoao = Conta()
-    contaJoao.titular = "João"
+    val contaJoao = Conta("João", 1002)
     var contaMaria = contaJoao
 
     contaMaria.titular = "Maria"

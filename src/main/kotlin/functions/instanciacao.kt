@@ -1,70 +1,66 @@
 import domain.Conta
 
 fun instanciacao() {
-    val contaOne = Conta()
-    contaOne.titular = "Dionatan"
-    contaOne.numero = 1000
-    contaOne.deposita(200.0)
+    val contaUm = Conta("Dionatan", 1000)
+    contaUm.deposita(200.0)
 
-    val contaTwo = Conta()
-    contaTwo.titular = "Leão"
-    contaTwo.numero = 1001
-    contaOne.deposita(300.0)
+    val contaDois = Conta("Leão", 1001)
+    contaDois.deposita(300.0)
 
-    println(contaOne.titular)
-    println(contaOne.numero)
-    println(contaOne.saldo)
+    println(contaUm.titular)
+    println(contaUm.numero)
+    println(contaUm.saldo)
 
     println("---------------------------------")
 
-    println(contaTwo.titular)
-    println(contaTwo.numero)
-    println(contaTwo.saldo)
+    println(contaDois.titular)
+    println(contaDois.numero)
+    println(contaDois.saldo)
 
     println("---------------------------------")
 
-    println("depositando na conta One")
-    contaOne.deposita(50.0)
-    println(contaOne.saldo)
+    println("depositando na conta Um")
+    contaUm.deposita(50.0)
+    println(contaUm.saldo)
 
     println()
 
-    println("depositando na conta Two")
-    contaTwo.deposita(70.0)
-    println(contaTwo.saldo)
+    println("depositando na conta Dois")
+    contaDois.deposita(70.0)
+    println(contaDois.saldo)
 
     println()
 
-    println("sacando na conta One")
-    contaOne.saca(250.0)
-    println(contaOne.saldo)
+    println("sacando na conta Um")
+    contaUm.saca(250.0)
+    println(contaUm.saldo)
 
     println()
 
-    println("sacando na conta Two")
-    contaTwo.saca(100.0)
-    println(contaTwo.saldo)
+    println("sacando na conta Dois")
+    contaDois.saca(100.0)
+    println(contaDois.saldo)
 
     println()
 
-    println("saque em excesso One")
-    contaOne.saca(100.0)
-    println(contaOne.saldo)
+    println("saque em excesso Um")
+    contaUm.saca(100.0)
+    println(contaUm.saldo)
 
-    println("saque em excesso Two")
-    contaOne.saca(500.0)
-    println(contaTwo.saldo)
+    println("saque em excesso Dois")
+    contaUm.saca(500.0)
+    println(contaDois.saldo)
 
     println()
 
-    println("transferencia da conta Two para a conta One")
-    if (contaTwo.transfere(100.0, contaOne)) {
+    println("transferencia da conta Dois para a conta Um")
+    if (contaDois.transfere(100.0, contaUm)) {
         println("transferência sucedida")
     } else {
         println("falha na transferência")
     }
 
     println()
-    println(contaOne.saldo)
-    println(contaTwo.saldo)
+    println(contaUm.saldo)
+    println(contaDois.saldo)
 }
