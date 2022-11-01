@@ -1,6 +1,7 @@
 import domain.Diretor
 import domain.Funcionario
 import domain.Gerente
+import service.CalculadoraBonificacao
 
 fun main() {
     println("------------------------------------------------------------------")
@@ -52,12 +53,21 @@ fun main() {
     println("salario: ${funcionarioTres.salario}")
     println("plr: ${funcionarioTres.plr}")
     println("bonificação: ${funcionarioTres.bonificacao()}")
+    println()
 
     if (funcionarioTres.autentica(4000)) {
         println("autenticou com sucesso")
     } else {
         println("falha na autenticação")
     }
+
+    val calculadora = CalculadoraBonificacao()
+
+    calculadora.registra(funcionarioUm)
+    calculadora.registra(funcionarioDois)
+    calculadora.registra(funcionarioTres)
+
+    println("total de bonificação: ${calculadora.total}")
 
 }
 
