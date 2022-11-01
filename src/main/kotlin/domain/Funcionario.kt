@@ -5,7 +5,7 @@ open class Funcionario(
     val cpf: String,
     val salario: Double
 ) {
-    fun bonificacao(): Double {
+    open fun bonificacao(): Double {
         return salario * 0.1
     }
 }
