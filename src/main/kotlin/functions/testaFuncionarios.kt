@@ -2,12 +2,11 @@ package functions
 
 import domain.Analista
 import domain.Diretor
-import domain.Funcionario
 import domain.Gerente
 import service.CalculadoraBonificacao
 
 fun testaFuncionarios() {
-    val funcionarioUm = Funcionario(
+    val funcionarioUm = Analista(
         "funcionario um",
         "111.111.111-11",
         1000.0
