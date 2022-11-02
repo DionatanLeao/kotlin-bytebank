@@ -15,7 +15,7 @@ fun testaFuncionarios() {
     println("nome: ${funcionarioUm.nome}")
     println("cpf: ${funcionarioUm.cpf}")
     println("salario: ${funcionarioUm.salario}")
-    println("bonificação: ${funcionarioUm.bonificacao()}")
+    println("bonificação: ${funcionarioUm.bonificacao}")
     println()
 
     val funcionarioDois = Gerente(
@@ -28,7 +28,7 @@ fun testaFuncionarios() {
     println("nome: ${funcionarioDois.nome}")
     println("cpf: ${funcionarioDois.cpf}")
     println("salario: ${funcionarioDois.salario}")
-    println("bonificação: ${funcionarioDois.bonificacao()}")
+    println("bonificação: ${funcionarioDois.bonificacao}")
 
     if (funcionarioDois.autentica(1234)) {
         println("autenticou com sucesso")
@@ -50,7 +50,7 @@ fun testaFuncionarios() {
     println("cpf: ${funcionarioTres.cpf}")
     println("salario: ${funcionarioTres.salario}")
     println("plr: ${funcionarioTres.plr}")
-    println("bonificação: ${funcionarioTres.bonificacao()}")
+    println("bonificação: ${funcionarioTres.bonificacao}")
 
     if (funcionarioTres.autentica(4000)) {
         println("autenticou com sucesso")
