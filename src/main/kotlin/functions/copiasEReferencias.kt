@@ -1,4 +1,4 @@
-import domain.Conta
+import domain.ContaCorrente
 
 fun copiasEReferencias() {
     val numeroX = 10
@@ -8,7 +8,7 @@ fun copiasEReferencias() {
     println("numeroX $numeroX")
     println("numeroY $numeroY")
 
-    val contaJoao = Conta("João", 1002)
+    val contaJoao = ContaCorrente("João", 1002)
     var contaMaria = contaJoao
 
     contaMaria.titular = "Maria"

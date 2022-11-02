@@ -3,7 +3,7 @@ package functions
 import domain.ContaCorrente
 import domain.ContaPoupanca
 
-fun testaContasDiferentes() {
+fun contasDiferentes() {
     val contaCorrente = ContaCorrente(
         titular = "conta corrente",
         numero = 1000

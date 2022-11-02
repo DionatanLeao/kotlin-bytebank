@@ -5,7 +5,7 @@ import domain.Diretor
 import domain.Gerente
 import service.CalculadoraBonificacao
 
-fun testaFuncionarios() {
+fun funcionarios() {
     val funcionarioUm = Analista(
         "funcionario um",
         "111.111.111-11",

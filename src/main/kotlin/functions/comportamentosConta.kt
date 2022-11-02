@@ -1,13 +1,11 @@
-import domain.Conta
+import domain.ContaCorrente
+import domain.ContaPoupanca
 
 fun comportamentosConta() {
-    val contaUm = Conta("Dionatan", 1000)
+    val contaUm = ContaCorrente("Dionatan", 1000)
     contaUm.deposita(200.0)
 
-    val contaDois = Conta("Leão", 1001)
-    contaDois.deposita(300.0)
-
-    val contaTres = Conta(titular = "Leão", numero = 1001)
+    val contaDois = ContaPoupanca("Leão", 1001)
     contaDois.deposita(300.0)
 
     println(contaUm.titular)
