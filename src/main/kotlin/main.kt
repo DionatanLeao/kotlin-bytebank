@@ -1,82 +1,43 @@
-import domain.Analista
-import domain.Diretor
-import domain.Funcionario
-import domain.Gerente
-import service.CalculadoraBonificacao
+import domain.Conta
+import domain.ContaCorrente
+import domain.ContaPoupanca
 
 fun main() {
     println("------------------------------------------------------------------")
     println("------------------- Bem vindo ao Bytebank ------------------------")
     println("------------------------------------------------------------------")
 
-    val funcionarioUm = Funcionario(
-        "funcionario um",
-        "111.111.111-11",
-        1000.0
+    val contaCorrente = ContaCorrente(
+        titular = "conta corrente",
+        numero = 1000
     )
 
-    println("nome: ${funcionarioUm.nome}")
-    println("cpf: ${funcionarioUm.cpf}")
-    println("salario: ${funcionarioUm.salario}")
-    println("bonificação: ${funcionarioUm.bonificacao()}")
-    println()
-
-    val funcionarioDois = Gerente(
-        "funcionario dois",
-        "222.222.222-22",
-        2000.0,
-        1234
+    val contaPoupanca = ContaPoupanca(
+        titular = "conta poupança",
+        numero = 1001
     )
 
-    println("nome: ${funcionarioDois.nome}")
-    println("cpf: ${funcionarioDois.cpf}")
-    println("salario: ${funcionarioDois.salario}")
-    println("bonificação: ${funcionarioDois.bonificacao()}")
+    contaCorrente.deposita(1000.0)
+    contaPoupanca.deposita(1000.0)
 
-    if (funcionarioDois.autentica(1234)) {
-        println("autenticou com sucesso")
-    } else {
-        println("falha na autenticação")
-    }
+    println("saldo conta corrente: ${contaCorrente.saldo}")
+    println("saldo conta poupança: ${contaPoupanca.saldo}")
 
-    println()
+    contaCorrente.saca(100.0)
+    contaPoupanca.saca(100.0)
 
-    val funcionarioTres = Diretor(
-        "funcionario tres",
-        "333.333.333-33",
-        4000.0,
-        4000,
-        200.0
-    )
+    println("saldo após conta corrente: ${contaCorrente.saldo}")
+    println("saldo após conta poupança: ${contaPoupanca.saldo}")
 
-    println("nome: ${funcionarioTres.nome}")
-    println("cpf: ${funcionarioTres.cpf}")
-    println("salario: ${funcionarioTres.salario}")
-    println("plr: ${funcionarioTres.plr}")
-    println("bonificação: ${funcionarioTres.bonificacao()}")
+    contaCorrente.transfere(100.0, contaPoupanca)
 
-    if (funcionarioTres.autentica(4000)) {
-        println("autenticou com sucesso")
-    } else {
-        println("falha na autenticação")
-    }
+    println("saldo conta corrente após transferir para poupança: ${contaCorrente.saldo}")
+    println("saldo conta poupança após receber transferência: ${contaPoupanca.saldo}")
 
-    println()
+    contaPoupanca.transfere(200.0, contaCorrente)
 
-    val funcionarioQuatro: Analista = Analista(
-        "funcionario quatro",
-        "444.444.444-44",
-        3000.0
-    )
-
-    val calculadora = CalculadoraBonificacao()
-
-    calculadora.registra(funcionarioUm)
-    calculadora.registra(funcionarioDois)
-    calculadora.registra(funcionarioTres)
-    calculadora.registra(funcionarioQuatro)
-
-    println("total de bonificação: ${calculadora.total}")
+    println("saldo conta poupança após transferir para conta corrente: ${contaPoupanca.saldo}")
+    println("saldo conta corrente após receber transferência: ${contaCorrente.saldo}")
 
 }
 
