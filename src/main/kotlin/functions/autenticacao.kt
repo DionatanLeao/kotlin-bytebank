@@ -1,5 +1,6 @@
 package functions
 
+import domain.Cliente
 import domain.Diretor
 import domain.Gerente
 import domain.SistemaInterno
@@ -20,7 +21,14 @@ fun autenticacao() {
         200.0
     )
 
+    val cliente = Cliente(
+        "Cliente",
+        "333.333.333-33",
+        3000
+    )
+
     val sistema = SistemaInterno()
     sistema.entra(gerente, 1000)
     sistema.entra(diretor, 2000)
+//    sistema.entra(cliente, 3000)
 }
