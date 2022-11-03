@@ -1,4 +1,4 @@
-import domain.ContaCorrente
+import entities.ContaCorrente
 
 fun copiasEReferencias() {
     val numeroX = 10

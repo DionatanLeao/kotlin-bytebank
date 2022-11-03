@@ -1,9 +1,9 @@
 package functions
 
-import domain.Analista
-import domain.Diretor
-import domain.Gerente
-import service.CalculadoraBonificacao
+import entities.Analista
+import entities.Diretor
+import entities.Gerente
+import services.CalculadoraBonificacao
 
 fun funcionarios() {
     val funcionarioUm = Analista(

@@ -1,8 +1,10 @@
-package domain
+package services
+
+import interfaces.Autenticavel
 
 class SistemaInterno {
 
-    fun entra(admin: FuncionarioAdmin, senha: Int) {
+    fun entra(admin: Autenticavel, senha: Int) {
         if (admin.autentica(senha)) {
             println("------------------------------------------------------------------")
             println("------------------- Bem vindo ao Bytebank ------------------------")

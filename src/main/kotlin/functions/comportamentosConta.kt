@@ -1,5 +1,5 @@
-import domain.ContaCorrente
-import domain.ContaPoupanca
+import entities.ContaCorrente
+import entities.ContaPoupanca
 
 fun comportamentosConta() {
     val contaUm = ContaCorrente("Dionatan", 1000)

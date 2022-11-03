@@ -1,9 +1,9 @@
 package functions
 
-import domain.Cliente
-import domain.Diretor
-import domain.Gerente
-import domain.SistemaInterno
+import entities.Cliente
+import entities.Diretor
+import entities.Gerente
+import services.SistemaInterno
 
 fun autenticacao() {
     val gerente = Gerente(
@@ -30,5 +30,5 @@ fun autenticacao() {
     val sistema = SistemaInterno()
     sistema.entra(gerente, 1000)
     sistema.entra(diretor, 2000)
-//    sistema.entra(cliente, 3000)
+    sistema.entra(cliente, 3000)
 }

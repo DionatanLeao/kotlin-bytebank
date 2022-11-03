@@ -1,6 +1,6 @@
-package service
+package services
 
-import domain.Funcionario
+import entities.Funcionario
 
 class CalculadoraBonificacao {
     var total: Double = 0.0

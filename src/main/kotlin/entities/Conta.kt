@@ -1,4 +1,4 @@
-package domain
+package entities
 
 abstract class Conta(
     var titular: String,

@@ -1,7 +1,7 @@
 package functions
 
-import domain.ContaCorrente
-import domain.ContaPoupanca
+import entities.ContaCorrente
+import entities.ContaPoupanca
 
 fun contasDiferentes() {
     val contaCorrente = ContaCorrente(

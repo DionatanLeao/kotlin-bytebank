@@ -1,4 +1,4 @@
-package domain
+package entities
 
 class ContaPoupanca(
     titular: String,

@@ -1,4 +1,4 @@
-package domain
+package entities
 
 class ContaCorrente(
     titular: String,

@@ -1,4 +1,6 @@
-package domain
+package entities
+
+import interfaces.Autenticavel
 
 class Diretor(
     nome: String,
@@ -6,7 +8,12 @@ class Diretor(
     salario: Double,
     senha: Int,
     val plr: Double
-) : FuncionarioAdmin(nome, cpf, salario, senha) {
+) : FuncionarioAdmin(
+    nome,
+    cpf,
+    salario,
+    senha
+), Autenticavel {
 
     override val bonificacao: Double
         get() {

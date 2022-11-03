@@ -1,4 +1,4 @@
-package domain
+package entities
 
 class Auxiliar(
     nome: String,
