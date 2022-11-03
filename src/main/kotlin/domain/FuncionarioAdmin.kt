@@ -1,13 +1,15 @@
 package domain
 
 abstract class FuncionarioAdmin(
-    val nome: String,
-    val cpf: String,
-    val salario: Double,
+    nome: String,
+    cpf: String,
+    salario: Double,
     val senha: Int
+): Funcionario(
+    nome,
+    cpf,
+    salario
 ) {
-    abstract val bonificacao: Double
-
     fun autentica(senha: Int): Boolean {
         if(this.senha == senha) {
             return true
