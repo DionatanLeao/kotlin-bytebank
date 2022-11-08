@@ -1,9 +1,9 @@
-package functions
+package teste
 
-import entities.Analista
-import entities.Diretor
-import entities.Gerente
-import services.CalculadoraBonificacao
+import modelo.Analista
+import modelo.Diretor
+import modelo.Gerente
+import modelo.CalculadoraBonificacao
 
 fun funcionarios() {
     val funcionarioUm = Analista(

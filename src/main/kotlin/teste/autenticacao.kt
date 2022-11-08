@@ -1,20 +1,20 @@
-package functions
+package teste
 
-import entities.Cliente
-import entities.Diretor
-import entities.Gerente
-import services.SistemaInterno
+import modelo.Cliente
+import modelo.Diretor
+import modelo.Gerente
+import modelo.SistemaInterno
 
 fun autenticacao() {
     val gerente = Gerente(
-        "Gerente",
+        "modelo.Gerente",
         "111.111.111-11",
         1000.0,
         1000
     )
 
     val diretor = Diretor(
-        "Diretor",
+        "modelo.Diretor",
         "222.222.222-22",
         1000.0,
         1000,
@@ -22,7 +22,7 @@ fun autenticacao() {
     )
 
     val cliente = Cliente(
-        "Cliente",
+        "modelo.Cliente",
         "333.333.333-33",
         3000
     )

@@ -1,6 +1,6 @@
-package entities
+package modelo
 
-import interfaces.Autenticavel
+import modelo.Autenticavel
 
 class Cliente(
     val nome: String,

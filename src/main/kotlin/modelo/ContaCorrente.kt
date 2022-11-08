@@ -1,4 +1,4 @@
-package entities
+package modelo
 
 class ContaCorrente(
     titular: String,

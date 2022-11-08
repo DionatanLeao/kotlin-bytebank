@@ -1,7 +1,7 @@
-package functions
+package teste
 
-import entities.ContaCorrente
-import entities.ContaPoupanca
+import modelo.ContaCorrente
+import modelo.ContaPoupanca
 
 fun contasDiferentes() {
     val contaCorrente = ContaCorrente(

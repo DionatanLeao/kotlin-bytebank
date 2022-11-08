@@ -1,4 +1,4 @@
-import entities.ContaCorrente
+import modelo.ContaCorrente
 
 fun copiasEReferencias() {
     val numeroX = 10

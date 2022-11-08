@@ -1,4 +1,4 @@
-package entities
+package modelo
 
 class ContaPoupanca(
     titular: String,

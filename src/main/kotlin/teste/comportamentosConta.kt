@@ -1,5 +1,5 @@
-import entities.ContaCorrente
-import entities.ContaPoupanca
+import modelo.ContaCorrente
+import modelo.ContaPoupanca
 
 fun comportamentosConta() {
     val contaUm = ContaCorrente("Dionatan", 1000)

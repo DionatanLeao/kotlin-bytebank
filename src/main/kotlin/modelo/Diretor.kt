@@ -1,6 +1,4 @@
-package entities
-
-import interfaces.Autenticavel
+package modelo
 
 class Diretor(
     nome: String,

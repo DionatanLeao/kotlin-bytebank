@@ -1,4 +1,4 @@
-package entities
+package modelo
 
 abstract class Conta(
     var titular: String,

@@ -1,6 +1,6 @@
-package services
+package modelo
 
-import entities.Funcionario
+import modelo.Funcionario
 
 class CalculadoraBonificacao {
     var total: Double = 0.0

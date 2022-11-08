@@ -1,4 +1,4 @@
-import functions.autenticacao
+import teste.autenticacao
 
 fun main() {
     autenticacao()
