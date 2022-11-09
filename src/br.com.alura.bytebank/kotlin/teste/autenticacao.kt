@@ -22,9 +22,9 @@ fun autenticacao() {
     )
 
     val cliente = Cliente(
-        "Cliente",
-        "333.333.333-33",
-        3000
+        nome = "Cliente",
+        cpf = "333.333.333-33",
+        senha = 3000
     )
 
     val sistema = SistemaInterno()

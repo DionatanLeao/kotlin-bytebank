@@ -9,8 +9,8 @@ fun copiasEReferencias() {
     println("numeroX $numeroX")
     println("numeroY $numeroY")
 
-    val joao = Cliente("João", "111.111.111-11", 12345)
-    val maria = Cliente("Maria", "222.222.222-22", 54321)
+    val joao = Cliente(nome = "João", cpf = "111.111.111-11", senha = 12345)
+    val maria = Cliente(nome = "Maria", cpf = "222.222.222-22", senha = 54321)
 
     val contaJoao = ContaCorrente(joao, 1002)
     var contaMaria = contaJoao

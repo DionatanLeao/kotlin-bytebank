@@ -3,15 +3,27 @@ package teste
 import modelo.Cliente
 import modelo.ContaCorrente
 import modelo.ContaPoupanca
+import modelo.Endereco
 
 fun contasDiferentes() {
 
-    val titularContaCorrente = Cliente("conta corrente", "111.111.111-11", 12345)
-    val titularContaPoupanca = Cliente("conta poupança", "222.222.222-22", 54321)
+    val titularContaCorrente = Cliente(
+        nome = "conta corrente",
+        cpf = "111.111.111-11",
+        senha = 12345,
+        endereco = Endereco(
+            logradouro = "Rua Vergueiro"
+        )
+    )
+    val titularContaPoupanca = Cliente(
+        nome = "conta poupança",
+        cpf = "222.222.222-22",
+        senha = 54321
+    )
 
     val contaCorrente = ContaCorrente(
         titular = titularContaCorrente,
-        numero = 1000
+        numero = 1000,
     )
 
     val contaPoupanca = ContaPoupanca(
@@ -40,4 +52,9 @@ fun contasDiferentes() {
 
     println("saldo conta poupança após transferir para conta corrente: ${contaPoupanca.saldo}")
     println("saldo conta corrente após receber transferência: ${contaCorrente.saldo}")
+
+    println("titular")
+    println("nome do titular ${contaCorrente.titular.nome}")
+    println("cpf do titular ${contaCorrente.titular.cpf}")
+    println("endereco titular ${contaCorrente.titular.endereco.logradouro}")
 }

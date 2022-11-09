@@ -4,8 +4,8 @@ import modelo.ContaPoupanca
 
 fun comportamentosConta() {
 
-    val clienteUm = Cliente("Dionatan", "111.111.111-11", 12345)
-    val clienteDois = Cliente("Leão", "222.222.222-22", 54321)
+    val clienteUm = Cliente(nome = "Dionatan", cpf = "111.111.111-11", senha = 12345)
+    val clienteDois = Cliente(nome = "Leão", cpf = "222.222.222-22", senha = 54321)
 
     val contaUm = ContaCorrente(clienteUm, 1000)
     contaUm.deposita(200.0)
