@@ -7,14 +7,14 @@ import modelo.SistemaInterno
 
 fun autenticacao() {
     val gerente = Gerente(
-        "modelo.Gerente",
+        "Gerente",
         "111.111.111-11",
         1000.0,
         1000
     )
 
     val diretor = Diretor(
-        "modelo.Diretor",
+        "Diretor",
         "222.222.222-22",
         1000.0,
         1000,
@@ -22,7 +22,7 @@ fun autenticacao() {
     )
 
     val cliente = Cliente(
-        "modelo.Cliente",
+        "Cliente",
         "333.333.333-33",
         3000
     )
