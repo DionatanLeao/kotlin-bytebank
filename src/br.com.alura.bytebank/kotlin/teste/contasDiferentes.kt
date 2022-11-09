@@ -1,16 +1,21 @@
 package teste
 
+import modelo.Cliente
 import modelo.ContaCorrente
 import modelo.ContaPoupanca
 
 fun contasDiferentes() {
+
+    val titularContaCorrente = Cliente("conta corrente", "111.111.111-11", 12345)
+    val titularContaPoupanca = Cliente("conta poupança", "222.222.222-22", 54321)
+
     val contaCorrente = ContaCorrente(
-        titular = "conta corrente",
+        titular = titularContaCorrente,
         numero = 1000
     )
 
     val contaPoupanca = ContaPoupanca(
-        titular = "conta poupança",
+        titular = titularContaPoupanca,
         numero = 1001
     )
 

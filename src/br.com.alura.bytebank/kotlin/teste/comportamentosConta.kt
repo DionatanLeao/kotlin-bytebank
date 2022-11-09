@@ -1,11 +1,16 @@
+import modelo.Cliente
 import modelo.ContaCorrente
 import modelo.ContaPoupanca
 
 fun comportamentosConta() {
-    val contaUm = ContaCorrente("Dionatan", 1000)
+
+    val clienteUm = Cliente("Dionatan", "111.111.111-11", 12345)
+    val clienteDois = Cliente("Leão", "222.222.222-22", 54321)
+
+    val contaUm = ContaCorrente(clienteUm, 1000)
     contaUm.deposita(200.0)
 
-    val contaDois = ContaPoupanca("Leão", 1001)
+    val contaDois = ContaPoupanca(clienteDois, 1001)
     contaDois.deposita(300.0)
 
     println(contaUm.titular)

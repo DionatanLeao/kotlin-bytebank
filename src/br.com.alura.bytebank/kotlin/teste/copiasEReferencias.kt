@@ -1,3 +1,4 @@
+import modelo.Cliente
 import modelo.ContaCorrente
 
 fun copiasEReferencias() {
@@ -8,11 +9,14 @@ fun copiasEReferencias() {
     println("numeroX $numeroX")
     println("numeroY $numeroY")
 
-    val contaJoao = ContaCorrente("João", 1002)
+    val joao = Cliente("João", "111.111.111-11", 12345)
+    val maria = Cliente("Maria", "222.222.222-22", 54321)
+
+    val contaJoao = ContaCorrente(joao, 1002)
     var contaMaria = contaJoao
 
-    contaMaria.titular = "Maria"
-    contaJoao.titular = "João"
+    contaMaria.titular.nome = "Maria"
+    contaJoao.titular.nome = "João"
 
     println("titular conta joao: ${contaJoao.titular}")
     println("titular conta maria: ${contaMaria.titular}")
