@@ -24,7 +24,7 @@ fun main() {
     val contaPoupanca = ContaPoupanca(titular = cliente, numero = 1000)
     val contaCorrente = ContaCorrente(titular = cliente, numero = 1001)
 
-    println("Total de contas: $totalContas")
+    println("Total de contas: ${Conta.Contador.total}")
 
 }
 
