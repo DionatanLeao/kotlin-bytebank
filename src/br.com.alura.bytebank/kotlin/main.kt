@@ -1,19 +1,18 @@
 import modelo.Endereco
-import teste.funcionarios
 
 fun main() {
-    val endereco = Endereco()
-    val objeto: Any = Any()
+    val endereco = Endereco(logradouro = "Rua A", complemento = "Casa")
+    val enderecoNovo = Endereco(bairro = "Vila Madalena", numero = 1000)
 
-    imprime(objeto)
+    println(endereco.equals(enderecoNovo))
 
-    imprime(1)
-    imprime(1.0)
-    val teste: Any = imprime(endereco)
-    println(teste)
+    println(endereco.hashCode())
+    println(enderecoNovo.hashCode())
 
-    funcionarios()
+    println(endereco)
+    println(enderecoNovo)
 
+    println("${endereco.javaClass}@${endereco.hashCode()}")
 }
 
 fun imprime(valor: Any): Any {
