@@ -4,9 +4,8 @@ class CalculadoraBonificacao {
     var total: Double = 0.0
         private set
 
-    fun registra(funcionario: Funcionario) {
-        println("nome: ${funcionario.nome}")
+    fun registra(funcionario: Any) {
+        val funcionarioNovo: Funcionario = funcionario as Funcionario
         this.total += funcionario.bonificacao
     }
-
 }

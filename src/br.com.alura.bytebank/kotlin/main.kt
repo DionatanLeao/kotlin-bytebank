@@ -1,32 +1,22 @@
-import modelo.*
-import teste.autenticacao
-import teste.contasDiferentes
+import modelo.Endereco
+import teste.funcionarios
 
 fun main() {
+    val endereco = Endereco()
+    val objeto: Any = Any()
 
-    val clientObjExpressions = object : Autenticavel {
-        val nome: String = "Nome"
-        val cpf: String = "111.111.111-11"
-        val senha: Int = 1000
+    imprime(objeto)
 
-        override fun autentica(senha: Int) = this.senha == senha
-    }
+    imprime(1)
+    imprime(1.0)
+    val teste: Any = imprime(endereco)
+    println(teste)
 
-    val sistemaInterno = SistemaInterno()
-    sistemaInterno.entra(clientObjExpressions, clientObjExpressions.senha)
-
-    println("Nome do cliente: ${clientObjExpressions.nome}")
-
-    autenticacao()
-    contasDiferentes()
-
-    val cliente = Cliente(nome = "Cliente", cpf = "", senha = 1)
-    val contaPoupanca = ContaPoupanca(titular = cliente, numero = 1000)
-    val contaCorrente = ContaCorrente(titular = cliente, numero = 1001)
-
-    println("Total de contas: ${Conta.Contador.total}")
+    funcionarios()
 
 }
 
-
-
+fun imprime(valor: Any): Any {
+    println(valor)
+    return valor
+}
