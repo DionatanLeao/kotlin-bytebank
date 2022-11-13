@@ -1,8 +1,16 @@
 import modelo.Endereco
 
 fun main() {
-    val endereco = Endereco(logradouro = "Rua A", complemento = "Casa")
-    val enderecoNovo = Endereco(bairro = "Vila Madalena", numero = 1000)
+    val endereco = Endereco(
+        logradouro = "Rua A",
+        complemento = "Casa",
+        cep = "00000-700"
+    )
+    val enderecoNovo = Endereco(
+        bairro = "Vila Madalena",
+        numero = 1000,
+        cep = "00000-700"
+    )
 
     println(endereco.equals(enderecoNovo))
 
