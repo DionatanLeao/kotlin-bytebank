@@ -1,3 +1,5 @@
+import modelo.Endereco
+
 fun main() {
     println("início main")
     funcao1()
@@ -14,6 +16,8 @@ fun funcao2() {
     println("início funcao2")
     for (i in 1..5){
         println(i)
+        val endereco = Any()
+        endereco as Endereco
     }
     println("fim funcao2")
 }
