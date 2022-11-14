@@ -1,11 +1,12 @@
 package modelo
 
+import exception.FalhaAutenticacaoException
 import exception.SaldoInsuficienteException
 
 abstract class Conta(
     var titular: Cliente,
     val numero: Int
-) {
+) : Autenticavel {
     var saldo = 0.0
         protected set
 
@@ -19,6 +20,10 @@ abstract class Conta(
         total++
     }
 
+    override fun autentica(senha: Int): Boolean {
+        return titular.autentica(senha)
+    }
+
     fun deposita(valor: Double) {
         if (valor > 0) {
             this.saldo += valor
@@ -27,9 +32,13 @@ abstract class Conta(
 
     abstract fun saca(valor: Double)
 
-    fun transfere(valor: Double, destino: Conta) {
-        if (saldo > valor) {
-            throw SaldoInsuficienteException()
+    fun transfere(valor: Double, destino: Conta, senha: Int) {
+        if (saldo < valor) {
+            throw SaldoInsuficienteException("O saldo é insuficiente, saldo atual: $saldo")
+        }
+
+        if (!autentica(senha)) {
+            throw FalhaAutenticacaoException()
         }
 
         saldo -= valor
