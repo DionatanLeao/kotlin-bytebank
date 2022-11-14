@@ -1,3 +1,4 @@
+import exception.SaldoInsuficienteException
 import modelo.Cliente
 import modelo.ContaCorrente
 import modelo.ContaPoupanca
@@ -60,11 +61,16 @@ fun comportamentosConta() {
     println()
 
     println("transferencia da conta Dois para a conta Um")
-    if (contaDois.transfere(valor = 300.0, destino = contaUm)) {
+
+    try {
+        contaDois.transfere(valor = 300.0, destino = contaUm)
         println("transferência sucedida")
-    } else {
+    } catch (e: SaldoInsuficienteException) {
         println("falha na transferência")
+        println("saldo insuficiente")
+        e.printStackTrace()
     }
+
 
     println()
     println(contaUm.saldo)

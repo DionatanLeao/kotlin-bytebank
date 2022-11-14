@@ -1,24 +1,19 @@
-import modelo.Endereco
+import exception.SaldoInsuficienteException
 
 fun main() {
     println("início main")
-    funcao1()
+    comportamentosConta()
     println("fim main")
 }
-
-
 
 fun funcao1() {
     println("início funcao1")
 
     try {
         funcao2()
-    } catch (e: ClassCastException) {
+    } catch (e: SaldoInsuficienteException) {
         e.printStackTrace()
-        println(e.message)
-        println(e.stackTrace)
-        println(e.cause)
-        println("ClassCastException foi pegada")
+        println("SaldoInsuficienteException foi pegada")
     }
 
     println("fim funcao1")
@@ -28,8 +23,8 @@ fun funcao2() {
     println("início funcao2")
     for (i in 1..5) {
         println(i)
-        val endereco = Any()
-        throw ArithmeticException()
+        throw SaldoInsuficienteException()
     }
     println("fim funcao2")
 }
+
