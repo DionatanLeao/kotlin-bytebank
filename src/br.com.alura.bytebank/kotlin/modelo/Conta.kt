@@ -40,7 +40,7 @@ abstract class Conta(
         if (!autentica(senha)) {
             throw FalhaAutenticacaoException()
         }
-
+        throw RuntimeException()
         saldo -= valor
         destino.deposita(valor)
     }

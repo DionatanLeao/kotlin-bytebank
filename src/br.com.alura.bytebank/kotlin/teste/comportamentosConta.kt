@@ -70,10 +70,13 @@ fun comportamentosConta() {
         println("falha na transferência")
         println("saldo insuficiente")
         e.printStackTrace()
-    } catch (ex: FalhaAutenticacaoException) {
+    } catch (e: FalhaAutenticacaoException) {
         println("falha na transferência")
         println("falha na atenticação")
-        ex.printStackTrace()
+        e.printStackTrace()
+    } catch (e: Exception) {
+        println("Erro desconhecido")
+        e.printStackTrace()
     }
 
 
