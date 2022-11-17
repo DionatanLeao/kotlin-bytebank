@@ -1,6 +1,6 @@
 package teste
 
-fun iterandoArray() {
+fun intoArray() {
     val idades = intArrayOf(25, 19, 33, 20, 55, 40)
 
     var maiorIdade = 0

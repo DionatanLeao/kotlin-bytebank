@@ -1,17 +1,39 @@
 fun main() {
-    val salarios: DoubleArray = doubleArrayOf(1500.50, 2300.0, 8000.0, 10000.0)
+    val serie: IntRange = 1.rangeTo(10) // 0
 
-    val aumento = 1.1
-
-    for (indice in salarios.indices) {
-        salarios[indice] = salarios[indice] * aumento
+    serie.forEach { s ->
+        print("$s ")
     }
 
-    println(salarios.contentToString())
+    println()
 
-    salarios.forEachIndexed { index, salario ->
-        salarios[index] = salario * aumento
+    val numerosPares = 0.until(100) step 2
+    numerosPares.forEach { numero ->
+        print("$numero ")
     }
-    println(salarios.contentToString())
+
+    println()
+
+    val numerosParesReverso = 100 downTo 0 step 2
+    numerosParesReverso.forEach { numeroReverso ->
+        print("$numeroReverso ")
+    }
+
+    println()
+
+    val intervalo = 1500.0..5000.0
+    val salario = 5001.0
+    if (salario in intervalo) {
+        println("Está dentro do intervalo")
+    } else {
+        print("Não está dentro do intervalo")
+    }
+
+    println()
+
+    val alfabeto = 'a'..'z'
+    val letra = 'k'
+    println(letra in alfabeto)
+
 
 }
