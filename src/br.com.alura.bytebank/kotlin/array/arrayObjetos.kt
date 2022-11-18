@@ -1,6 +1,5 @@
-package colecoes
+package array
 
-import java.math.BigDecimal
 import java.math.RoundingMode
 
 fun arrayObjetos() {

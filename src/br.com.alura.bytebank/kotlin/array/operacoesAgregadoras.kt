@@ -1,4 +1,4 @@
-package colecoes
+package array
 
 fun operacoesAgregadoras() {
     val idades = intArrayOf(10, 12, 18, 33, 40, 67)

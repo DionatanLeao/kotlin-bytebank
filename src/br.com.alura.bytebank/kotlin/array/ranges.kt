@@ -1,4 +1,4 @@
-package colecoes
+package array
 
 fun ranges() {
     val serie: IntRange = 1.rangeTo(10) // 0

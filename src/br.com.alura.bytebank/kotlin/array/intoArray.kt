@@ -1,4 +1,4 @@
-package colecoes
+package array
 
 fun intoArray() {
     val idades = intArrayOf(25, 19, 33, 20, 55, 40)
