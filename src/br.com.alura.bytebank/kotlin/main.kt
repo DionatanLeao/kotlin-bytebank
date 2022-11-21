@@ -1,4 +1,5 @@
 import lista.Livro
+import teste.listaDeLivros
 
 fun main() {
     val livro1 = Livro(
@@ -37,7 +38,6 @@ fun main() {
         )
     )
 
-
     livros.imprimeComMarcadores()
     livros.remove(livro1)
     livros.imprimeComMarcadores()
@@ -49,6 +49,14 @@ fun main() {
     ordenadoPorTitulo.imprimeComMarcadores()
 
     livros.sortedBy { it.autor }.imprimeComMarcadores()
+
+    val titulos = listaDeLivros
+        .filter { it.autor.startsWith("J") }
+        .sortedBy { it.anoPublicacao }
+        .map { it.titulo }
+
+    println(titulos)
+
 
 }
 
