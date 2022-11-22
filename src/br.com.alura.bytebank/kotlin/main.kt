@@ -1,6 +1,10 @@
-import lista.imprimeComMarcadores
-import teste.listaDeLivrosComNulos
+import lista.Livro
+import teste.listaDeLivros
 
 fun main() {
-    listaDeLivrosComNulos.imprimeComMarcadores()
+    listaDeLivros
+        .groupBy { it.editora ?: "Editora desconhecida" }
+        .forEach { (editora: String?, livros: List<Livro>) ->
+            println("$editora: ${livros.joinToString { it.titulo }}")
+        }
 }
