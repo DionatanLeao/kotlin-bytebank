@@ -2,12 +2,14 @@ package teste
 
 import lista.Livro
 
-val listaDeLivros = mutableListOf(
+val listaDeLivrosComNulos: MutableList<Livro?> = mutableListOf(
+    null,
     Livro(
         titulo = "Grande Sertão: Veredas",
         autor = "João Guimarães Rosa",
         anoPublicacao = 1956
     ),
+    null,
     Livro(
         titulo = "Minha vida de menina",
         autor = "Helena Morley",
