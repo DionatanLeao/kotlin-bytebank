@@ -2,15 +2,18 @@ package collections
 
 fun main() {
     val banco = BancoDeNomes()
+//    val nomesSalvos: MutableCollection<String> = banco.nomes as MutableCollection<String>
+    val nomesSalvos: Collection<String> = banco.nomes
 //    banco.nomes.add("Nome1")
+//    nomesSalvos.add("Nome2")
     banco.salva("Nome1")
-    println(banco.nomes)
+    println(nomesSalvos)
     println(BancoDeNomes().nomes)
 
 }
 
 class BancoDeNomes {
-    val nomes: Collection<String> get() = dados
+    val nomes: Collection<String> get() = dados.toList()
 
     companion object {
         private val dados = mutableListOf<String>()
