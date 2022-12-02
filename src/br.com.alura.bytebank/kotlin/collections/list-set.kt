@@ -3,6 +3,17 @@ package collections
 fun main() {
 //    list()
 //    set()
+    val pedidos = mapOf(Pair(1, 20.0), Pair(2, 34.0), 3 to 50.0)
+    println(pedidos)
+    val pedido = pedidos[3]
+    pedido?.let {
+        println("Pedido $it")
+    }
+
+    pedidos.forEach {
+        println("número do pedido: ${it.key}")
+        println("valor do pedido: ${it.value}")
+    }
 }
 
 private fun set() {
