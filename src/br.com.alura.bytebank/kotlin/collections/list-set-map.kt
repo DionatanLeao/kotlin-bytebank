@@ -9,37 +9,31 @@ fun main() {
         Pair(2, 34.0),
         3 to 50.0,
         4 to 100.0,
-        5 to 150.0,
+        5 to 100.0,
         6 to 80.0
     )
-//    val valorPedido = pedidos.get(0)
-//    val valorPedido = pedidos.getValue(5)
-    val mensagem = pedidos.getOrElse(0) {
-        0.0
-    }
-    println(mensagem)
-    println(pedidos.getOrDefault(1, -1.0))
-    println(pedidos.getOrDefault(0, -1.0))
-    println(pedidos.keys)
 
-    for (numeroPedidos in pedidos.keys) {
-        println("Pedido: $numeroPedidos")
-    }
+//    println(pedidos + Pair(7, 90.0))
+    println(pedidos + mapOf(7 to 90.0, 8 to 20.0))
+    println(pedidos)
+    println(pedidos - listOf(5,6))
+    println(pedidos)
 
-    val pedidosFiltrados = pedidos.filter { (numero, valor) ->
-        numero % 2 == 0 && valor > 50.0
-    }
+//    pedidos.putAll(setOf(7 to 90.0, 8 to 20.0, 8 to 30.0))
+    pedidos += listOf(7 to 90.0, 8 to 20.0, 8 to 30.0)
+    println(pedidos)
 
-    println(pedidosFiltrados)
+    pedidos.keys.remove(1)
+    println(pedidos)
 
-    val pedidosAcima = pedidos.filterValues { valor ->
-        valor > 70.0
-    }
-    println(pedidosAcima)
-    val pedidosPares = pedidos.filterKeys { numero ->
-        numero % 2 == 0
-    }
-    println(pedidosPares)
+    pedidos.values.remove(50.0)
+    println(pedidos)
+
+    pedidos.values.remove(100.0)
+    println(pedidos)
+
+    pedidos -= 6
+    println(pedidos)
 }
 
 private fun map() {
@@ -68,6 +62,37 @@ private fun map() {
     println(pedidos)
     pedidos.remove(6)
     println(pedidos)
+
+//    val valorPedido = pedidos.get(0)
+//    val valorPedido = pedidos.getValue(5)
+    val mensagem = pedidos.getOrElse(0) {
+        0.0
+    }
+
+    println(mensagem)
+    println(pedidos.getOrDefault(1, -1.0))
+    println(pedidos.getOrDefault(0, -1.0))
+    println(pedidos.keys)
+
+    for (numeroPedidos in pedidos.keys) {
+        println("Pedido: $numeroPedidos")
+    }
+
+    val pedidosFiltrados = pedidos.filter { (numero, valor) ->
+        numero % 2 == 0 && valor > 50.0
+    }
+
+    println(pedidosFiltrados)
+
+    val pedidosAcima = pedidos.filterValues { valor ->
+        valor > 70.0
+    }
+    println(pedidosAcima)
+    val pedidosPares = pedidos.filterKeys { numero ->
+        numero % 2 == 0
+    }
+    println(pedidosPares)
+
 }
 
 private fun set() {
