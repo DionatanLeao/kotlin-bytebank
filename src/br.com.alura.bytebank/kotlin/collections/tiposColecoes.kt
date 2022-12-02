@@ -1,6 +1,11 @@
 package collections
 
 fun main() {
+    testaCopia()
+    testaColecao()
+}
+
+private fun testaCopia() {
     val banco = BancoDeNomes()
 //    val nomesSalvos: MutableCollection<String> = banco.nomes as MutableCollection<String>
     val nomesSalvos: Collection<String> = banco.nomes
@@ -9,7 +14,6 @@ fun main() {
     banco.salva("Nome1")
     println(nomesSalvos)
     println(BancoDeNomes().nomes)
-
 }
 
 class BancoDeNomes {
