@@ -1,7 +1,5 @@
 package paradigma_funcional
 
-var numero = 10
-
 fun main() {
     println(soma(1,5))
     println(soma(1,5))
