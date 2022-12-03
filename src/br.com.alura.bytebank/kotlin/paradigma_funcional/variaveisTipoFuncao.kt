@@ -1,11 +1,28 @@
 package paradigma_funcional
 
 fun main() {
-    val minhaFuncao: () -> Unit = ::teste
-    println(minhaFuncao())
+//    tipoFuncaoReferencia()
+//    tipoFuncaoClasse()
 
+    val minhaFuncaoLambda = {
+        println("executa com lambda")
+    }
+    println(minhaFuncaoLambda())
+
+    val minhaFuncaoAnonima: () -> Unit = fun() {
+        println("executa como anonima")
+    }
+    println(minhaFuncaoAnonima())
+}
+
+private fun tipoFuncaoClasse() {
     val minhaClasse: () -> Unit = Teste()
     println(minhaClasse())
+}
+
+private fun tipoFuncaoReferencia() {
+    val minhaFuncao: () -> Unit = ::teste
+    println(minhaFuncao())
 }
 
 fun teste() {
