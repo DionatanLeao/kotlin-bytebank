@@ -1,24 +1,26 @@
 package paradigma_funcional
 
 fun main() {
-    tipoFuncaoReferencia()
-    tipoFuncaoClasse()
-//    tipoFuncaoLambda()
-//    tipoFuncaoAnomima()
+//    tipoFuncaoReferencia()
+//    tipoFuncaoClasse()
+    tipoFuncaoLambda()
+    tipoFuncaoAnomima()
 }
 
 private fun tipoFuncaoAnomima() {
-    val minhaFuncaoAnonima: () -> Unit = fun() {
+    val minhaFuncaoAnonima = fun(a: Int, b: Int): Int {
         println("executa como anonima")
+        return a + b
     }
-    println(minhaFuncaoAnonima())
+    println(minhaFuncaoAnonima(20, 10))
 }
 
 private fun tipoFuncaoLambda() {
-    val minhaFuncaoLambda = {
+    val minhaFuncaoLambda = { a: Int, b: Int ->
         println("executa com lambda")
+        a+b
     }
-    println(minhaFuncaoLambda())
+    println(minhaFuncaoLambda(15, 10))
 }
 
 private fun tipoFuncaoClasse() {
