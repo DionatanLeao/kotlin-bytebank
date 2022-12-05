@@ -3,16 +3,20 @@ package paradigma_funcional
 import modelo.Endereco
 
 fun main() {
-    val testaFuncao = Endereco().let {
-        println("Endereço - $it")
-    }
+//    val endereco = Endereco(logradouro = "rua a", numero = 3185)
+//    val enderecoMaiusculo = "${endereco.logradouro}, ${endereco.numero}".toUpperCase()
+//    println(enderecoMaiusculo)
 
-    "teste".let(::recebeString)
-    1.let {
-        println("1 - $it")
-    }
+    Endereco(logradouro = "rua a", numero = 3185).let { endereco ->
+        "${endereco.logradouro}, ${endereco.numero}".toUpperCase()
+    }.let (::println)
 
-    teste(1, {})
+    val enderecoComplemento = listOf(Endereco(complemento = "casa"),
+        Endereco(),
+        Endereco(complemento = "apto")
+    ).filter { endereco ->
+            endereco.complemento.isNotEmpty()
+    }.let(::println)
 
 }
 
